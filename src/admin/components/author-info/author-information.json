@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_author_info_author_informations",
+  "info": {
+    "displayName": "Author Information",
+    "icon": "angry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "profilePic": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "nameOfAuthor": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfUpload": {
+      "type": "date"
+    }
+  }
+}

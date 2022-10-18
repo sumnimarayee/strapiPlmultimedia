@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interns",
+  "info": {
+    "singularName": "intern",
+    "pluralName": "interns",
+    "displayName": "intern",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string"
+    },
+    "field": {
+      "type": "enumeration",
+      "enum": [
+        "Web Development",
+        "App Development",
+        "Multimedia",
+        "Networking",
+        "Business"
+      ],
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

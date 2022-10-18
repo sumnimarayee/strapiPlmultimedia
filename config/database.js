@@ -8,7 +8,10 @@
         database: env('DATABASE_NAME', 'ddp9aldid85jge'),
         user: env('DATABASE_USERNAME', 'nufghyarakkhoz'),
         password: env('DATABASE_PASSWORD', '3b048c4c427d14d112d94342bdf82e7f373f30a7fbebd13a9a48349553e024bf'),
-        schema: env('DATABASE_SCHEMA', 'public'), // Not required
+        ssl: {
+          rejectUnauthorized: false,
+        },
+        // schema: env('DATABASE_SCHEMA', 'public'), // Not required
       }
   }
 });

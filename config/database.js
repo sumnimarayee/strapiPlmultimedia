@@ -1,45 +1,18 @@
   // strapi-api/config/database.js
-//   module.exports = ({ env }) => ({
-//     connection: {
-//       client: 'postgres',
-//       connection: {
-//         host: env('DATABASE_HOST', 'localhost'),
-//         port: env.int('DATABASE_PORT', 3000),
-//         database: env('DATABASE_NAME', 'database'),
-//         user: env('DATABASE_USERNAME', 'postgres'),
-//         password: env('DATABASE_PASSWORD', 'password123@$#'),
-//         schema: env('DATABASE_SCHEMA', 'public'), // Not required
-//       }
-//   }
-// });
-
-const parse = require('pg-connection-string').parse;
-const config = parse(process.env.DATABASE_URL);
-
-module.exports = ({ env }) => ({
-  defaultConnection: 'default',
-  connections: {
-    default: {
-      connector: 'bookshelf',
-      settings: {
-        client: 'postgres',
-        host: config.host,
-        port: config.port,
-        database: config.database,
-        user: config.user,
-        password: config.password,
-        ssl: {
-          rejectUnauthorized: false,
-        },
-      },
-      options: {
-        ssl: true,
-      },
-    },
-  },
+  module.exports = ({ env }) => ({
+    connection: {
+      client: 'postgres',
+      connection: {
+        host: env('DATABASE_HOST', 'ec2-44-207-126-176.compute-1.amazonaws.com'),
+        port: env.int('DATABASE_PORT', 5432),
+        database: env('DATABASE_NAME', 'ddp9aldid85jge'),
+        user: env('DATABASE_USERNAME', 'nufghyarakkhoz'),
+        password: env('DATABASE_PASSWORD', '3b048c4c427d14d112d94342bdf82e7f373f30a7fbebd13a9a48349553e024bf'),
+        schema: env('DATABASE_SCHEMA', 'public'), // Not required
+      }
+  }
 });
-
-
+// postgres://nufghyarakkhoz:3b048c4c427d14d112d94342bdf82e7f373f30a7fbebd13a9a48349553e024bf@ec2-44-207-126-176.compute-1.amazonaws.com:5432/ddp9aldid85jge
 // const path = require('path');
 
 // module.exports = ({ env }) => ({
